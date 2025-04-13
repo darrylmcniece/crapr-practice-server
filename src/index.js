@@ -11,8 +11,8 @@ const logger = require("./util/logger");
 const { errorHandler } = require("./middleware/errors");
 
 // Routes
-const authRoutes = require("./routes/auth");
-const crapRoutes = require("./routes/craps");
+const authRoutes = require("./router/auth");
+const crapRoutes = require("./router/craps");
 
 // Initialize Express app
 const app = express();
@@ -28,8 +28,8 @@ app.use(passport.initialize());
 db.connect();
 
 // Routes
-app.use("/api/auth", authRoutes);
-app.use("/api/craps", crapRoutes);
+app.use("/api/auth", authRouter);
+app.use("/api/craps", crapRouter);
 
 // Health check endpoint
 app.get("/health", (req, res) => {
