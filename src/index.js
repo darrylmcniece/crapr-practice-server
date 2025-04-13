@@ -6,7 +6,7 @@ const passport = require("passport");
 // Initialize passport config
 require("./util/passport");
 
-const db = require("./util/db");
+const db = require("./models/db");
 const logger = require("./util/logger");
 const { errorHandler } = require("./middleware/errors");
 
