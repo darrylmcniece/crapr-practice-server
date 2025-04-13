@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: crap-app-server
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: GOOGLE_REDIRECT_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: MONGO_URL
+        sync: false
+      - key: GOOGLE_STORAGE_BUCKET_NAME
+        sync: false
+      - key: CLIENT_URL
+        sync: false
+      - key: GOOGLE_STORAGE_SECRET
+        sync: false
