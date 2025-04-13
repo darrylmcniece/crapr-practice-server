@@ -11,8 +11,8 @@ const logger = require("./util/logger");
 const { errorHandler } = require("./middleware/errors");
 
 // Routes
-const authRoutes = require("./router/auth");
-const crapRoutes = require("./router/craps");
+const authRoutes = require("./routers/auth");
+const crapRoutes = require("./routers/craps");
 
 // Initialize Express app
 const app = express();
